@@ -1,6 +1,7 @@
 {
   "private": true,
   "dependencies": {
+    "@epsagon/epsagon": "^0.1.17",
     "aws-sdk": "~2"
   }
 }

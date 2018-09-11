@@ -1,5 +1,14 @@
 const fs = require('fs');
-exports.handler = async event => {
+
+const epsagon = require('@epsagon/epsagon');
+
+epsagon.init({
+    token: '71f4394d-5014-471d-b815-3489bd180ece',
+    appName: 'test-tobias-1',
+    metadataOnly: false,
+});
+
+exports.handler = epsagon.lambdaWrapper(async event => {
   // Log http request
   console.log(event);
 
@@ -14,4 +23,4 @@ exports.handler = async event => {
   };
 
   return response;
-};
+});
